@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
   <head>
     <meta charset="utf-8" />
@@ -13,13 +9,28 @@
     <link rel="stylesheet" href="" />
   </head>
   <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
+    <form action="" id="myForm1">
+      <h2>User Profile</h2>
+      <label for="fname">First Name:</label><br>
+      <input type="text" id="fname" name="fname" disabled><br>
+      <label for="lname">Last Name:</label><br>
+      <input type="text" id="lname" name="lname" disabled><br>
+      <button id="editBtn">Edit</button>
+      <button id="saveBtn" style="display:none;">Save</button>
+      <button id="cancelBtn" style="display:none;">Cancel</button>
+    </form>
 
-    <script src="" async defer></script>
+    <form action="" id="myForm2">
+      <h2>Update Password</h2>
+      <label for="oldPassword">Old Password:</label><br>
+      <input type="password" id="oldPassword" name="oldPassword" required><br>
+      <label for="newPassword">New Password:</label><br>
+      <input type="password" id="newPassword" name="newPassword" required><br><br>
+      <button type="submit" id="updatePasswordBtn">Update Password</button>
+      <p id="error"></p>
+      <p id="success"></p>
+    </form>
+    <button id="logoutBtn">Logout</button>
+    <script src="script.js" async defer></script>
   </body>
 </html>
